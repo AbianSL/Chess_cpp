@@ -1,7 +1,7 @@
 class board{
  public:
   void print();
+  unsigned get_size() const {return size;}
  private:
-  const unsigned row{7};
-  const unsigned colum{7};
+  const unsigned size{7};
 };
