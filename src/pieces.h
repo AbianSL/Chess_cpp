@@ -1,0 +1,6 @@
+class king {
+ public:
+
+ private:
+  
+};
