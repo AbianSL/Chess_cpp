@@ -1,7 +1,7 @@
 #include "board.h"
 
 int main() {
-  board a;
-  a.print();
+  Board a(7);
+  a.Print();
   return 0;
 }

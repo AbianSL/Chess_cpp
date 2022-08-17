@@ -1,7 +1,16 @@
-class board{
+#ifndef BOARD_H
+#define BOARD_H
+
+#include "pieces.h"
+
+class Board{
  public:
-  void print();
-  unsigned get_size() const {return size;}
+  Board(const unsigned kSize) {};
+  Board() {}:
+  void Print();
+  unsigned GetSize() const {return size_;}
  private:
-  const unsigned size{7};
+  const unsigned size_{7};
 };
+
+#endif

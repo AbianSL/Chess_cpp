@@ -1,9 +1,13 @@
+#include <iostream>
+
 #include "board.h"
 
-void board::print() {
-  for(unsigned colum{0}; colum < size; ++colum) {
-    for(unsigned row{0}; row < size; ++row) {
+void Board::Print() {
+  for(unsigned colum{0}; colum < GetSize(); ++colum) {
+    for(unsigned row{0}; row < GetSize(); ++row) {
+      std::cout << "x ";
     }
+    std::cout << std::endl;
   }
   return;
 }
