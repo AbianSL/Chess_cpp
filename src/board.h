@@ -10,6 +10,7 @@ class Board{
   void Print();
   unsigned GetSize() const {return size_;}
  private:
+  
   unsigned size_;
 };
 
