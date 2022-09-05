@@ -2,39 +2,48 @@
 #define PIECES_H 
 
 #include <vector>
-#include <pair_t.h>
+namespace Characteristics {
+  enum Colour {
+    white,
+    black,
+  };
 
-enum Colour {
-  white,
-  black,
-};
+  enum NamePieces {
+    king,
+    queen,
+    pawn,
+  };
 
-enum NamePieces {
-  king,
-  queen,
-  pawn,
-};
+  struct Pair{
+    NamePieces name;
+    bool alive;
+  };
+}
 
+/**
+ * @brief that struct is for clasificate if the pieces are death or alive
+ * 
+ */
 struct PiecesHealthy{
-  std::vector<pair_t<int>> white_pieces_healthy;
-  std::vector<pair_t<int>> black_pieces_healthy;
+  std::vector<Characteristics::Pair> white_pieces_healthy;
+  std::vector<Characteristics::Pair> black_pieces_healthy;
 };
 
-class King {
+class King : PiecesHealthy{
  public:
-  King(const Colour& kCoulor, const NamePieces kName) {
+  King(const Characteristics::Colour& kCoulor, const Characteristics::NamePieces& kName) {
     colour_king_ = kCoulor;
-    if (kCoulor == white) {
-      white_pieces_healthy.
-    } else if () {
+    if (kCoulor == Characteristics::white) {
 
+    } else if (kCoulor == Characteristics::black) {
+      white_pieces_healthy.push_back();
     } else {
 
     }
   }
  private:
-  Colour colour_king_;
-  const NamePieces name_king {king};
+  Characteristics::Colour colour_king_;
+  const Characteristics::NamePieces name_king {Characteristics::king};
 };
 
 #endif PIECES_H
