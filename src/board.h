@@ -5,12 +5,12 @@
 
 class Board{
  public:
-  Board(const unsigned kSize) {};
-  Board() {}:
+  Board(const unsigned kSize) {size_ = kSize;}
+  Board() {size_ = 7;}
   void Print();
   unsigned GetSize() const {return size_;}
  private:
-  const unsigned size_{7};
+  unsigned size_;
 };
 
 #endif
