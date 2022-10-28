@@ -1,5 +1,17 @@
+/**
+ * @file Board.h
+ * @author your name (you@domain.com)
+ * @brief 
+ * @version 0.1
+ * @date 2022-10-28
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #ifndef BOARD_H
 #define BOARD_H
+
+#pragma once
 
 #include "Pieces.h"
 
