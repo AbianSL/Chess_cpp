@@ -1,4 +1,4 @@
-#include "board.h"
+#include "Board.h"
 
 int main() {
   Board a(7);

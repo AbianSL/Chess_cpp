@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "pieces.h"
+#include "Pieces.h"
 
 /**
  * @brief that function is for construct the concept basic from pieces 

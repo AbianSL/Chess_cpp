@@ -1,7 +1,7 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-#include "pieces.h"
+#include "Pieces.h"
 
 class Board{
  public:

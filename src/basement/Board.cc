@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "board.h"
+#include "Board.h"
 
 void Board::Print() {
   for(unsigned colum{0}; colum < GetSize(); ++colum) {
