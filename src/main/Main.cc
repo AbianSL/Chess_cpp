@@ -10,11 +10,6 @@
  */
 #include "../basement/Board.h"
 
-/**
- * @brief is the main function
- * 
- * @return int to unsure if the main is correctly executed
- */
 int main() {
   Board a(7);
   a.Print();
