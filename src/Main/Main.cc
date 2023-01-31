@@ -8,10 +8,7 @@
  * @copyright Copyright (c) 2022
  * 
  */
-#include "../basement/Board.h"
 
 int main() {
-  Board a(7);
-  a.Print();
   return 0;
 }
