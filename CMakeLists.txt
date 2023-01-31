@@ -1,10 +1,5 @@
-# Universidad de La Laguna
-# Escuela Superior de Ingeniería y Tecnología
-# Grado en Ingeniería Informática
-# Informática Básica
-#
-# @author F. de Sande
-# @date Dec 13 2021
+# @author Abian Santana Ledesma
+# @date JAN 31 2022
 # @brief CMakeLists.txt for the board class code
 # CMakeLists.txt defines the whole build
 # CMake reads CMakeLists.txt sequentially
@@ -41,12 +36,45 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 include_directories(${PROJECT_SOURCE_DIR}/src)
 
 # Adds an executable target called "main" to be built from the source files listed in the command invocation.
-add_executable(main
-    src/board.h
-    src/board.cc
-    src/pieces.h
-    src/pieces.cc
-    src/main.cc)
+add_executable(Chess
+    src/Basement/Board.cc
+    src/Basement/Board.h
+    src/Basement/Pieces.cc
+    src/Basement/Pieces.h
+    src/Pieces/Bishop.cc
+    src/Pieces/Bishop.h
+    src/Pieces/King.cc
+    src/Pieces/King.h
+    src/Pieces/Knight.cc
+    src/Pieces/Knight.h
+    src/Pieces/Pawn.cc
+    src/Pieces/Pawn.h
+    src/Pieces/Queen.cc
+    src/Pieces/Queen.h
+    src/Pieces/Rook.cc
+    src/Pieces/Rook.cc
+    src/main/Main.cc
+    )
+
+add_executable(runTest
+    src/Basement/Board.cc
+    src/Basement/Board.h
+    src/Basement/Pieces.cc
+    src/Basement/Pieces.h
+    src/Pieces/Bishop.cc
+    src/Pieces/Bishop.h
+    src/Pieces/King.cc
+    src/Pieces/King.h
+    src/Pieces/Knight.cc
+    src/Pieces/Knight.h
+    src/Pieces/Pawn.cc
+    src/Pieces/Pawn.h
+    src/Pieces/Queen.cc
+    src/Pieces/Queen.h
+    src/Pieces/Rook.cc
+    src/Pieces/Rook.cc
+    test/
+)
 
 # Add expected compiler features to a target.
 target_compile_features(main PRIVATE cxx_std_14)
