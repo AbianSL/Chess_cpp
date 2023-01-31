@@ -7,3 +7,13 @@ That repository is a personal proyect to do a Chess in c++, it's my first time u
 ## Tests
 
 For running the test it's mandatory the google test for c++
+
+## Cmake
+
+It need also install cmake
+
+to install it do:
+
+``` 
+sudo apt-get install cmake 
+```
