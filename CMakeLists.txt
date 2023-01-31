@@ -1,6 +1,6 @@
 # @author Abian Santana Ledesma
 # @date JAN 31 2022
-# @brief CMakeLists.txt for the board class code
+# @brief CMakeLists.txt for the Chess program
 # CMakeLists.txt defines the whole build
 # CMake reads CMakeLists.txt sequentially
 #
