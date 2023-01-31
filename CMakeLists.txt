@@ -15,7 +15,7 @@
 cmake_minimum_required(VERSION 3.1)  # Mandatory
 
 # set the project name 
-project(board                # Mandatory
+project(Chess                # Mandatory
     VERSION 1.0
     DESCRIPTION "A simple CMake project for the Fibonacci Sum application"
     LANGUAGES CXX)
@@ -73,11 +73,11 @@ add_executable(runTest
     src/Pieces/Queen.h
     src/Pieces/Rook.cc
     src/Pieces/Rook.cc
-    test/
+    test/Main/main_test.cc
 )
 
 # Add expected compiler features to a target.
-target_compile_features(main PRIVATE cxx_std_14)
+target_compile_features(main PRIVATE cxx_std_17)
 
 # Add compile options to a target.
 target_compile_options(main PRIVATE -Wall -Wextra -Wpedantic)
