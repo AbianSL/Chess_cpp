@@ -35,6 +35,10 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 # tell cmake where to look for *.h files
 include_directories(${PROJECT_SOURCE_DIR}/src)
 
+# Locate GTest
+find_package(GTest REQUIRED)
+include_directories(${GTEST_INCLUDE_DIRS})
+
 # Adds an executable target called "main" to be built from the source files listed in the command invocation.
 add_executable(Chess
     src/Basement/Board.cc
@@ -53,7 +57,7 @@ add_executable(Chess
     src/Pieces/Queen.h
     src/Pieces/Rook.cc
     src/Pieces/Rook.cc
-    src/main/Main.cc
+    src/Main/Main.cc
     )
 
 add_executable(runTest
@@ -73,11 +77,14 @@ add_executable(runTest
     src/Pieces/Queen.h
     src/Pieces/Rook.cc
     src/Pieces/Rook.cc
-    test/Main/main_test.cc
+    test/Main/Main_test.cc
 )
 
+
+target_link_libraries(runTest ${GTEST_LIBRARIES} pthread)
+
 # Add expected compiler features to a target.
-target_compile_features(main PRIVATE cxx_std_17)
+target_compile_features(Chess PRIVATE cxx_std_17)
 
 # Add compile options to a target.
-target_compile_options(main PRIVATE -Wall -Wextra -Wpedantic)
+target_compile_options(Chess PRIVATE -Wall -Wextra -Wpedantic)
