@@ -17,13 +17,17 @@
 
 class Board{
  public:
-  Board(const unsigned kSize) {size_ = kSize;}
-  Board() {size_ = 7;}
+  Board(const Board& kBoard);
+  Board(const unsigned short& kRows = 7, const unsigned short& kColums = 7);
   void Print();
-  unsigned GetSize() const {return size_;}
+  unsigned short GetSize() const;
+  unsigned short GetRows() const;
+  unsigned short GetColums() const;
+ 
  private:
-  
-  unsigned size_;
+  unsigned short size_;
+  unsigned short rows_;
+  unsigned short colums_;
 };
 
 #endif
