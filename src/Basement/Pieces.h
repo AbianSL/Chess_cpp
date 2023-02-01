@@ -42,19 +42,15 @@ namespace Characteristics {
   };
 }
 
-// that global vector is to store the white and black pieces that live
-std::vector<Characteristics::Pair> white_pieces_healthy;
-std::vector<Characteristics::Pair> black_pieces_healthy;
-
-void Constructor(const Characteristics::Colour& kCoulor, const Characteristics::NamePieces& kName);
-
-class King {
+class Pieces {
  public:
-  King(const Characteristics::Colour& kCoulor, Characteristics::NamePieces& name);
+  Pieces(const Characteristics::Colour& kCoulor, const Characteristics::NamePieces& kName);
+  void Print();
+
  private:
-  Characteristics::Colour colour_king_;
-  const Characteristics::NamePieces name_king {Characteristics::king};
-};
+  std::vector<Characteristics::Pair> white_pieces_healthy;
+  std::vector<Characteristics::Pair> black_pieces_healthy;
+}
 
 
 #endif
