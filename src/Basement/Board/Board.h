@@ -13,7 +13,6 @@
 
 #pragma once
 
-#include "Pieces.h"
 
 class Board{
  public:

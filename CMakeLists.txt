@@ -21,7 +21,7 @@ project(Chess                # Mandatory
     LANGUAGES CXX)
 
 # specify the C++ standard
-set(CMAKE_CXX_STANDARD 17) 						# Use c++14
+set(CMAKE_CXX_STANDARD 17) 						# Use c++17
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # tell cmake to output binaries here:
@@ -36,52 +36,86 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 include_directories(${PROJECT_SOURCE_DIR}/src)
 
 # Locate GTest
-find_package(GTest REQUIRED)
-include_directories(${GTEST_INCLUDE_DIRS})
+# find_package(GTest REQUIRED)
+# include_directories(${GTEST_INCLUDE_DIRS})
 
 # Adds an executable target called "main" to be built from the source files listed in the command invocation.
 add_executable(Chess
-    src/Basement/Board.cc
-    src/Basement/Board.h
-    src/Basement/Pieces.cc
-    src/Basement/Pieces.h
-    src/Pieces/Bishop.cc
-    src/Pieces/Bishop.h
-    src/Pieces/King.cc
-    src/Pieces/King.h
-    src/Pieces/Knight.cc
-    src/Pieces/Knight.h
-    src/Pieces/Pawn.cc
-    src/Pieces/Pawn.h
-    src/Pieces/Queen.cc
-    src/Pieces/Queen.h
-    src/Pieces/Rook.cc
-    src/Pieces/Rook.cc
-    src/Main/Main.cc
+    src/Basement/Board/Board.cc
+    src/Basement/Board/Board.h
+    src/Basement/Final/Score.cc
+    src/Basement/Final/Score.h
+    src/Basement/Menu/GameMenu.cc
+    src/Basement/Menu/GameMenu.h
+    src/Basement/Operations/Operations.cc
+    src/Basement/Operations/Operations.h
+    
+    src/Pieces/Pieces.cc
+    src/Pieces/Pieces.h
+    src/Pieces/Pieces_CC/Bishop.cc
+    src/Pieces/Pieces_CC/King.cc
+    src/Pieces/Pieces_CC/Knight.cc
+    src/Pieces/Pieces_CC/Pawn.cc
+    src/Pieces/Pieces_CC/Rook.cc
+    src/Pieces/Pieces_CC/Queen.cc
+    src/Pieces/Pieces_H/Bishop.h
+    src/Pieces/Pieces_H/King.h
+    src/Pieces/Pieces_H/Knight.h
+    src/Pieces/Pieces_H/Pawn.h
+    src/Pieces/Pieces_H/Queen.h
+    src/Pieces/Pieces_H/Rook.h
+
+    src/States/StatesPieces.cc
+    src/States/StatesPieces.h
+    src/States/Dead/DeadPieces.h
+    src/States/Dead/DeadPieces.cc
+    src/States/Alive/AlivePieces.h
+    src/States/Alive/AlivePieces.cc
+    src/States/Position/Position.h
+    src/States/Position/Position.cc
+
+    src/Main.cc
     )
 
-add_executable(runTest
-    src/Basement/Board.cc
-    src/Basement/Board.h
-    src/Basement/Pieces.cc
-    src/Basement/Pieces.h
-    src/Pieces/Bishop.cc
-    src/Pieces/Bishop.h
-    src/Pieces/King.cc
-    src/Pieces/King.h
-    src/Pieces/Knight.cc
-    src/Pieces/Knight.h
-    src/Pieces/Pawn.cc
-    src/Pieces/Pawn.h
-    src/Pieces/Queen.cc
-    src/Pieces/Queen.h
-    src/Pieces/Rook.cc
-    src/Pieces/Rook.cc
-    test/Main/Main_test.cc
-)
+#add_executable(runTest
+#    src/Basement/Board/Board.cc
+#    src/Basement/Board/Board.h
+#    src/Basement/Final/Score.cc
+#    src/Basement/Final/Score.h
+#    src/Basement/Menu/GameMenu.cc
+#    src/Basement/Menu/GameMenu.h
+#    src/Basement/Operations/Operations.cc
+#    src/Basement/Operations/Operations.h
+#    
+#    src/Pieces/Pieces.cc
+#    src/Pieces/Pieces.h
+#    src/Pieces/Pieces_CC/Bishop.cc
+#    src/Pieces/Pieces_CC/King.cc
+#    src/Pieces/Pieces_CC/Knight.cc
+#    src/Pieces/Pieces_CC/Pawn.cc
+#    src/Pieces/Pieces_CC/Rook.cc
+#    src/Pieces/Pieces_CC/Queen.cc
+#    src/Pieces/Pieces_H/Bishop.h
+#    src/Pieces/Pieces_H/King.h
+#    src/Pieces/Pieces_H/Knight.h
+#    src/Pieces/Pieces_H/Pawn.h
+#    src/Pieces/Pieces_H/Queen.h
+#    src/Pieces/Pieces_H/Rook.h
+#
+#    src/States/StatesPieces.cc
+#    src/States/StatesPieces.h
+#    src/States/Dead/DeadPieces.h
+#    src/States/Dead/DeadPieces.cc
+#    src/States/Alive/AlivePieces.h
+#    src/States/Alive/AlivePieces.cc
+#    src/States/Position/Position.h
+#    src/States/Position/Position.cc
+#
+#    test/Main/Main_test.cc
+#)
 
 
-target_link_libraries(runTest ${GTEST_LIBRARIES} pthread)
+# target_link_libraries(runTest ${GTEST_LIBRARIES} pthread)
 
 # Add expected compiler features to a target.
 target_compile_features(Chess PRIVATE cxx_std_17)
