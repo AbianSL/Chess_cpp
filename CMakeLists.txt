@@ -116,8 +116,8 @@ if (GTEST_FOUND)
   )
   target_link_libraries(runTest ${GTEST_LIBRARIES} pthread)
 else()
-  message(WARNING "To Execute the test you should install gtest")
-
+  # if the user don't have gtest installed
+  message(WARNING "To Execute the unit test you should install gtest")
 endif()
 
 # Add expected compiler features to a target.
