@@ -9,7 +9,7 @@
  * 
  */
 
-#include "King.h"
+#include "../Pieces_H/King.h"
 
 /**
  * @brief Construct a new King:: King object
@@ -42,12 +42,3 @@ unsigned char King::GetPieceColor() const {
   return piece_color_;
 }
 
-/**
- * @brief Check if the piece is being attacked
- * 
- * @return true if the piece is being attacked
- * @return false if the piece is not being attacked
- */
-bool King::IsBeingAttacked() const {
-  return false;
-}
