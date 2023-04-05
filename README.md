@@ -12,7 +12,7 @@ For running the test it's mandatory the google test for c++
 
 It need also install cmake
 
-to install it do:
+to install it do on Debian:
 
 ``` 
 sudo apt-get install cmake 
