@@ -17,7 +17,7 @@
 
 struct Coordinates {
   uint8_t row_;
-  uint8_t colum_;
+  uint8_t column_;
 };
 
 class Piece {

@@ -17,9 +17,10 @@
  * @param piece_color That parameter determinate the 
  *                    color of the piece
  */
-King::King(uint8_t piece_color) {
+King::King(uint8_t piece_color, Coordinates first_position) {
   piece_color_ = piece_color;
   piece_name_ = "King";
+  actual_position_ = first_position;
 }
 
 /**
@@ -88,8 +89,8 @@ bool King::Move(const Coordinates to_move) {
 bool King::ValidMove(const Coordinates to_move) const {
   if (to_move.row_ == actual_position_.row_ + 1 ||
       to_move.row_ == actual_position_.row_ - 1) {
-    if (to_move.colum_ == actual_position_.colum_ + 1 ||
-        to_move.colum_ == actual_position_.colum_ - 1) {
+    if (to_move.column_ == actual_position_.column_ + 1 ||
+        to_move.column_ == actual_position_.column_ - 1) {
       return true;
     }
   }

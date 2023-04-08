@@ -16,7 +16,7 @@
 
 class King : protected Piece {
  public:
-  King(uint8_t piece_color);
+  King(uint8_t piece_color, Coordinates first_position);
 
   std::string GetPieceName() const override;
   unsigned char GetPieceColor() const override;   
