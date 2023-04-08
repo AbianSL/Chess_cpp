@@ -20,6 +20,10 @@ class King : protected Piece {
 
   std::string GetPieceName() const override;
   unsigned char GetPieceColor() const override;   
+  Coordinates GetActualPosition() const override;
+
+  bool Attack(const Coordinates to_move) override;
+  bool Move(const Coordinates to_move) override;
 };
 
 #endif  // KING_H

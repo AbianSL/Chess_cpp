@@ -29,8 +29,8 @@ class Piece {
   // virtual bool IsBeingAttacked() const = 0;
   // virtual bool IsBeingMoved() const = 0;
 
-  virtual bool Attack() const = 0;
-  virtual bool Move() const = 0;
+  virtual bool Attack(const Coordinates to_move) = 0;
+  virtual bool Move(const Coordinates to_move) = 0;
  protected:
   uint8_t piece_color_; // 0 = white, 1 = black
   std::string piece_name_;
