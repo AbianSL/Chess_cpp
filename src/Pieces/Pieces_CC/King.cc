@@ -42,3 +42,33 @@ unsigned char King::GetPieceColor() const {
   return piece_color_;
 }
 
+/**
+ * @brief Get the Actual Position object
+ * 
+ * @return ActualPosition the actual position of the piece
+ */
+Coordinates King::GetActualPosition() const {
+  return actual_position_;
+}
+
+/**
+ * @brief Attack the piece
+ * 
+ * @return true 
+ * @return false 
+ */
+bool King::Attack(const Coordinates to_move) {
+  Move(to_move);
+  return 0;
+}
+
+/**
+  * @brief Move the piece
+  * 
+  * @return true 
+  * @return false 
+  */
+bool King::Move(const Coordinates to_move) {
+  actual_position_ = to_move;
+  return 0;
+}
