@@ -11,14 +11,13 @@
 
 #include "gtest/gtest.h"
 
-#include "../../src/Pieces/Pieces_H/Bishop.h"
-#include "../../src/Pieces/Pieces.h"
+#include "../../src/Pieces/Pieces_H/Bishop.h" // Bishop
+#include "../../src/Pieces/Pieces.h"          // Coordinates
 
 // Test if the Bishop can move right
 TEST(BishopTestMove, BishopMoveRight) {
-  Coordinates Position;
-  position.column = 0;
-  position.row = 0;
+  Coordinates Position(0, 0);
   Bishop bishop(1, Position);
-  EXPECT_EQ(bishop.move(1, 1), true);
+  Coordinates Destination(1, 1);
+  EXPECT_EQ(bishop.Move(Destination), true);
 }
