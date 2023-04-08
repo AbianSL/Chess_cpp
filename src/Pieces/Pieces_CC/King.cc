@@ -58,8 +58,11 @@ Coordinates King::GetActualPosition() const {
  * @return false 
  */
 bool King::Attack(const Coordinates to_move) {
-  Move(to_move);
-  return 0;
+  if (ValidMove(to_move)) {
+    actual_position_ = to_move; 
+    return true;
+  } 
+  return false;
 }
 
 /**
@@ -69,6 +72,26 @@ bool King::Attack(const Coordinates to_move) {
   * @return false 
   */
 bool King::Move(const Coordinates to_move) {
-  actual_position_ = to_move;
-  return 0;
+  if (ValidMove(to_move)) {
+    actual_position_ = to_move; 
+    return true;
+  } 
+  return false;
+}
+
+/**
+ * @brief Check if the move is valid
+ * 
+ * @return true 
+ * @return false 
+ */
+bool King::ValidMove(const Coordinates to_move) const {
+  if (to_move.row_ == actual_position_.row_ + 1 ||
+      to_move.row_ == actual_position_.row_ - 1) {
+    if (to_move.colum_ == actual_position_.colum_ + 1 ||
+        to_move.colum_ == actual_position_.colum_ - 1) {
+      return true;
+    }
+  }
+  return false;
 }

@@ -24,6 +24,8 @@ class King : protected Piece {
 
   bool Attack(const Coordinates to_move) override;
   bool Move(const Coordinates to_move) override;
+  
+  bool ValidMove(const Coordinates to_move) const override;
 };
 
 #endif  // KING_H
