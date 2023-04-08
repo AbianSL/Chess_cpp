@@ -16,6 +16,7 @@
 #include <cstdint> // int8_t
 
 struct Coordinates {
+  Coordinates();
   Coordinates(const uint8_t row, const uint8_t column);
   uint8_t row_;
   uint8_t column_;
@@ -23,6 +24,7 @@ struct Coordinates {
 
 class Piece {
  public:
+  Piece();
   virtual std::string GetPieceName() const = 0;
   virtual unsigned char GetPieceColor() const = 0;
   virtual Coordinates GetActualPosition() const = 0;

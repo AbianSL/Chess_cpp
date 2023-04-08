@@ -16,7 +16,7 @@
 
 class Bishop : protected Piece {
  public:
-  Bishop(const uint8_t piece_color, const Coordinates actual_position);
+  Bishop(const uint8_t piece_color, const Coordinates first_position);
 
   std::string GetPieceName() const override;
   unsigned char GetPieceColor() const override;

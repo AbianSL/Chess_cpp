@@ -17,9 +17,9 @@
  * @param piece_color 
  * @param actual_position 
  */
-Bishop::Bishop(const uint8_t piece_color, const Coordinates actual_position) {
+Bishop::Bishop(const uint8_t piece_color, const Coordinates first_position) {
   piece_color_ = piece_color;
-  actual_position_ = actual_position;
+  actual_position_ = first_position;
   piece_name_ = "Bishop";
 }
 
