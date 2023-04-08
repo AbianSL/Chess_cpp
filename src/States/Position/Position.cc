@@ -11,11 +11,3 @@
   */ 
 
 #include "Position.h"
-
-/**
- * @brief Get the Positions object
- * 
- */
-std::vector<std::pair<*Piece, ActualPosition>> Position::GetPositions() const {
-  return positions_;
-}
