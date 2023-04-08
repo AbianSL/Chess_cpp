@@ -113,6 +113,13 @@ if (GTEST_FOUND)
       src/States/Position/Position.cc
 
       test/Main/Main_test.cc
+      
+      test/Movement/Bishop_test.cc
+      test/Movement/King_test.cc
+      test/Movement/Knight_test.cc
+      test/Movement/Pawn_test.cc
+      test/Movement/Queen_test.cc
+      test/Movement/Rook_test.cc
   )
   target_link_libraries(runTest ${GTEST_LIBRARIES} pthread)
 else()
