@@ -9,20 +9,32 @@
  * 
  */
 
+#ifndef PIECES_H_
+#define PIECES_H_
+
 #include <string> // std::string
 #include <cstdint> // int8_t
+
+struct ActualPosition {
+  uint8_t row_;
+  uint8_t colum_;
+};
 
 class Piece {
  public:
   virtual std::string GetPieceName() const = 0;
   virtual unsigned char GetPieceColor() const = 0;
+  virtual ActualPosition GetActualPosition() const = 0;
 
   // virtual bool IsBeingAttacked() const = 0;
   // virtual bool IsBeingMoved() const = 0;
 
-  // virtual bool Attack() const = 0;
-  //  virtual bool Move() const = 0;
+  virtual bool Attack() const = 0;
+  virtual bool Move() const = 0;
  protected:
   uint8_t piece_color_; // 0 = white, 1 = black
   std::string piece_name_;
+  ActualPosition actual_position_;
 };
+
+#endif  // PIECES_H_

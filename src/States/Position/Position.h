@@ -21,16 +21,11 @@
 
 #include "../../Pieces/Pieces.h"
 
-struct ActualPosition {
-  uint8_t row_;
-  uint8_t colum_;
-};
-
 class Position {
  public:
-  std::vector<std::pair<*Piece, ActualPosition>> GetPositions() const;
+  std::vector<Piece> GetPositions() const;
  private:
-  std::vector<std::pair<*Piece, ActualPosition>> positions_;
+  std::vector<Piece> positions_;
 };
 
 #endif    //POSITION_H
