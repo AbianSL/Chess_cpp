@@ -15,7 +15,7 @@
 #include <string> // std::string
 #include <cstdint> // int8_t
 
-struct ActualPosition {
+struct Coordinates {
   uint8_t row_;
   uint8_t colum_;
 };
@@ -24,7 +24,7 @@ class Piece {
  public:
   virtual std::string GetPieceName() const = 0;
   virtual unsigned char GetPieceColor() const = 0;
-  virtual ActualPosition GetActualPosition() const = 0;
+  virtual Coordinates GetActualPosition() const = 0;
 
   // virtual bool IsBeingAttacked() const = 0;
   // virtual bool IsBeingMoved() const = 0;
@@ -34,7 +34,7 @@ class Piece {
  protected:
   uint8_t piece_color_; // 0 = white, 1 = black
   std::string piece_name_;
-  ActualPosition actual_position_;
+  Coordinates actual_position_;
 };
 
 #endif  // PIECES_H_
