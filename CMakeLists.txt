@@ -21,7 +21,7 @@ project(Chess                # Mandatory
     LANGUAGES CXX)
 
 # specify the C++ standard
-set(CMAKE_CXX_STANDARD 17) 						# Use c++17
+set(CMAKE_CXX_STANDARD 23) 						# Use c++23
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # tell cmake to output binaries here:
