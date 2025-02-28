@@ -13,14 +13,8 @@
 #define PIECES_H_
 
 #include <string> // std::string
-#include <cstdint> // int8_t
 
-struct Coordinates {
-  Coordinates();
-  Coordinates(const uint8_t row, const uint8_t column);
-  uint8_t row_;
-  uint8_t column_;
-};
+import Position;
 
 class Piece {
  public:
